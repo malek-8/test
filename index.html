@@ -10,22 +10,32 @@
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
+            padding: 20px; /* Reduced padding for better responsiveness */
+            margin: 0; /* Remove default margin */
         }
         .container {
             display: flex;
-            flex-direction: column; /* Stack on small screens */
+            flex-direction: column; /* Default to column on small screens */
             align-items: center;
             justify-content: center;
+            gap: 20px; /* Space between elements */
         }
         .image {
-            max-width: 300px; /* Adjust size as needed */
-            margin: 20px; /* Space around images */
+            width: 100%; /* Full width on small screens */
+            max-width: 300px; /* Maximum size for larger screens */
+        }
+        video {
+            width: 100%; /* Full width video */
+            max-width: 640px; /* Maximum video size */
+            height: auto; /* Maintain aspect ratio */
         }
         /* For larger screens */
         @media (min-width: 600px) {
             .container {
                 flex-direction: row; /* Side by side layout */
+            }
+            .image {
+                margin: 0 20px; /* Horizontal margin for images */
             }
         }
     </style>
@@ -36,7 +46,7 @@
 
     <div class="container">
         <img src="thedragonliveswithinposter.jpg" alt="Left Image" class="image">
-        <video width="640" height="480" controls>
+        <video controls>
             <source src="thevideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
