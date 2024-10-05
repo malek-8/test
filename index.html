@@ -14,12 +14,19 @@
         }
         .container {
             display: flex;
+            flex-direction: column; /* Stack on small screens */
             align-items: center;
             justify-content: center;
         }
         .image {
-            max-width: 500px; /* Adjust size as needed */
-            margin: 0 50px; /* Space between images and video */
+            max-width: 300px; /* Adjust size as needed */
+            margin: 20px; /* Space around images */
+        }
+        /* For larger screens */
+        @media (min-width: 600px) {
+            .container {
+                flex-direction: row; /* Side by side layout */
+            }
         }
     </style>
 </head>
@@ -36,6 +43,6 @@
         <img src="thedragonliveswithinposter.jpg" alt="Right Image" class="image">
     </div>
 
-    <p>(ill put the voting link here)</p>
+    <p>(I'll put the voting link here)</p>
 </body>
 </html>
