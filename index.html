@@ -10,16 +10,44 @@
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
+            padding: 20px;
+            margin: 0;
         }
         .container {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
         }
-        .image {
-            max-width: 500px; /* Adjust size as needed */
-            margin: 0 50px; /* Space between images and video */
+        .image, video {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Media Queries for different screen sizes */
+        @media (min-width: 600px) {
+            .image, video {
+                max-width: 45%; /* Allow some scaling on medium screens */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .image, video {
+                max-width: 30%; /* Larger screens (like laptops, tablets) */
+            }
+            video {
+                max-width: 40%; /* Adjust video size separately if needed */
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .image, video {
+                max-width: 25%; /* Extra large screens like monitors, TVs */
+            }
         }
     </style>
 </head>
@@ -29,13 +57,13 @@
 
     <div class="container">
         <img src="thedragonliveswithinposter.jpg" alt="Left Image" class="image">
-        <video width="640" height="480" controls>
+        <video controls>
             <source src="thevideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <img src="thedragonliveswithinposter.jpg" alt="Right Image" class="image">
     </div>
 
-    <p>(ill put the voting link here)</p>
+    <p>(I'll put the voting link here)</p>
 </body>
 </html>
