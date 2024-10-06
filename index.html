@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOTE FOR MALEK</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;  /* website title and style */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .image, video {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* scales for different screen sizes */
+	@media (min-width: 300px) {
+            .image, video {
+                max-width: 60%; /* scale for phones */
+            }
+	    video {
+		max-width: 90%;
+        }
+
+        @media (min-width: 600px) {
+            .image, video {
+                max-width: 30%; /* scale for medium screens */
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .image, video {
+                max-width: 20%; /* scale for larger screens (laptops, tablets) */
+            }
+            video {
+                max-width: 40%; /* scale video size separately */
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .image, video {
+                max-width: 25%; /* scale for extra large screens (monitors, TVs) */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>VOTE FOR MALEK</h1>
+    <p>Malek for President!</p>
+
+    <div class="container">
+        <img src="thedragonliveswithinposter.jpg" alt="Left Image" class="image">
+        <video controls>
+            <source src="thevideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <img src="thedragonliveswithinposter.jpg" alt="Right Image" class="image">
+    </div>
+
+    <p>(I'll put the voting link here)</p>
+</body>
+</html>
